@@ -12,4 +12,6 @@ However, there are a few places where the foundation is laid.
 
 * [Function definitions](3-definition/README.md)
 
+* [Grammar specification](4-grammar/README.md)
+
 [Top](../README.md) > What is a Python decorator?
