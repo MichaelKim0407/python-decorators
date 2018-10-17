@@ -8,4 +8,4 @@
 
 * [Orders do matter](4-order/README.md)
 
-[Top](../README.md) > A dive into the syntax
+[Prev](../1-intro/README.md) `|` [Top](../README.md) > A dive into the syntax `|` [Next](../3-builtins/README.md)

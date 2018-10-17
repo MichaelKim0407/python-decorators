@@ -14,4 +14,4 @@ However, there are a few places where the foundation is laid.
 
 * [Grammar specification](4-grammar/README.md)
 
-[Top](../README.md) > What is a Python decorator?
+[Top](../README.md) > What is a Python decorator? `|` [Next](../2-syntax/README.md)
