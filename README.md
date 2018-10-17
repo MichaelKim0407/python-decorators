@@ -8,8 +8,8 @@ Michael Kim <mkim0407@gmail.com>
 
 * [A dive into the syntax](2-syntax/README.md)
 
-* [Built-in decorators](3-builtins/README.md)
+* [@staticmethod and @classmethod](3-staticmethod/README.md)
 
 * [Examples](4-examples/README.md)
 
-* [More built-in decorators](5-more-builtins/README.md)
+* [Built-ins and libraries](5-builtins/README.md)
