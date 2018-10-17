@@ -10,4 +10,5 @@ Thus it is more about designing the decorator syntax than using decorators.
 There is also another PEP written later, [PEP 3129](https://www.python.org/dev/peps/pep-3129/).
 It simply introduces class decorators (i.e. decorators decorating classes) in the syntax.
 
-[Top](../../README.md) > [What is a Python decorator?](../README.md) > PEP 318 `|` [Next](../2-glossary/README.md)
+[Top](../../README.md) > [What is a Python decorator?](../README.md) > PEP 318 /
+[Next](../2-glossary/README.md)
