@@ -17,6 +17,6 @@ and returned a modified version of it.
     def my_func():
         pass
 
-[Prev](../../1-intro/4-grammar/README.md) /
-[Top](../../README.md) > [A dive into the syntax](../README.md) > Writing a decorator /
+[Prev](../README.md) /
+[Up](../README.md) /
 [Next](../2-params/README.md)

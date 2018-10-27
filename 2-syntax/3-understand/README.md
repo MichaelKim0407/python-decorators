@@ -56,5 +56,5 @@ In the spirit of being Pythonic, if there's something the interpreter doesn't li
 there's probably a better way to write it.
 
 [Prev](../2-params/README.md) /
-[Top](../../README.md) > [A dive into the syntax](../README.md) > Passing parameters /
+[Up](../README.md) /
 [Next](../4-order/README.md)

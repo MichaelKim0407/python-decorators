@@ -26,5 +26,5 @@ and a decorator is considered part of the function definition.
 Similar text can also be found in the [class definitions](https://docs.python.org/3/reference/compound_stmts.html#class).
 
 [Prev](../2-glossary/README.md) /
-[Top](../../README.md) > [What is a Python decorator?](../README.md) > Function definitions /
+[Up](../README.md) /
 [Next](../4-grammar/README.md)

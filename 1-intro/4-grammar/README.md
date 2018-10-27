@@ -13,5 +13,5 @@ must be in a line by itself,
 and we can stack one or several decorators before a class or function definition.
 
 [Prev](../3-definition/README.md) /
-[Top](../../README.md) > [What is a Python decorator?](../README.md) > Grammar specification /
-[Next](../../2-syntax/1-write/README.md)
+[Up](../README.md) /
+[Next](../../2-syntax/README.md)

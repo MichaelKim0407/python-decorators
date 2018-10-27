@@ -26,5 +26,5 @@ We can also see that the writers of the Python docs treat decorator as a syntact
 which explains why it is not extensively introduced.
 
 [Prev](../1-pep-318/README.md) /
-[Top](../../README.md) > [What is a Python decorator?](../README.md) > Glossary /
+[Up](../README.md) /
 [Next](../3-definition/README.md)

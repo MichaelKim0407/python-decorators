@@ -8,6 +8,6 @@
 
 * [Orders do matter](4-order/README.md)
 
-[Prev](../1-intro/README.md) /
-[Top](../README.md) > A dive into the syntax /
-[Next](../3-staticmethod/README.md)
+[Prev](../1-intro/4-grammar/README.md) /
+[Up](../README.md) /
+[Next](1-write/README.md)

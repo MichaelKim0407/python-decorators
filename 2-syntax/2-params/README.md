@@ -20,5 +20,5 @@ is the equivalent of
     my_func = with_params(0)(my_func)
 
 [Prev](../1-write/README.md) /
-[Top](../../README.md) > [A dive into the syntax](../README.md) > Passing parameters /
+[Up](../README.md) /
 [Next](../3-understand/README.md)
