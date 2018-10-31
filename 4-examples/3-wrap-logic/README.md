@@ -63,4 +63,4 @@ and after being decorated they are still Django views.
 
 [Prev](../2-register/README.md) /
 [Up](../README.md) /
-[Next](../4-return-value/README.md)
+[Next](../4-generator/README.md)

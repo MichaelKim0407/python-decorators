@@ -6,11 +6,9 @@
 
 * [Wrapping a simple logic](3-wrap-logic/README.md)
 
-* [Changing the return value](4-return-value/README.md)
+* [Working with generator functions](4-generator/README.md)
 
 * [Function-like class instances](5-class/README.md)
-
-* [Working with generator functions](6-generator/README.md)
 
 [Prev](../3-staticmethod/README.md) /
 [Up](../README.md) /
