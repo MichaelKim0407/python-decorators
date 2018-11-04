@@ -9,7 +9,7 @@ when building an iterable.
 However in some cases a generator by itself may not fulfill what is needed.
 In this case it can be combined with decorators to achieve more complex functionality.
 
-(Executable scripts available in [repo](https://github.com/MichaelKim0407/python-decorators/tree/master/4-examples/4-generator).)
+(Executable scripts available in [repo](https://github.com/MichaelKim0407/python-decorators/tree/master/3-examples/4-generator).)
 <!-- Stupid GitHub does not render `target="_blank"` written in Markdown, so you need to right click -->
 
 * Example 1

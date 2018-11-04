@@ -10,7 +10,7 @@
     In practice properties are used just like value attributes -
     they can be accessed with dotted name without parentheses.
 
-    (Executable scripts available in [repo](https://github.com/MichaelKim0407/python-decorators/tree/master/5-builtins/1-property).)
+    (Executable scripts available in [repo](https://github.com/MichaelKim0407/python-decorators/tree/master/4-builtins/2-property).)
 
         class Vector2(object):
             def __init__(self, x, y):
@@ -123,6 +123,6 @@
             print(c.squared)
             print(c.squared)
 
-[Prev](../README.md) /
+[Prev](../1-staticmethod/README.md) /
 [Up](../README.md) /
-[Next](../2-functools/README.md)
+[Next](../3-functools/README.md)

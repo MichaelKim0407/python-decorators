@@ -10,6 +10,6 @@
 
 * [Function-like class instances](5-class/README.md)
 
-[Prev](../3-staticmethod/README.md) /
+[Prev](../2-syntax/4-order/README.md) /
 [Up](../README.md) /
 [Next](1-annotate/README.md)

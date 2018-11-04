@@ -36,6 +36,6 @@ even before the decorator syntax was finalized.
 When used, they have to be the outermost (top) decorator,
 because they turn methods into special `staticmethod` and `classmethod` objects.
 
-[Prev](../../2-syntax/4-order/README.md) /
+[Prev](../README.md) /
 [Up](../README.md) /
-[Next](../4-examples/README.md)
+[Next](../2-property/README.md)

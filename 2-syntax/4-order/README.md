@@ -30,4 +30,4 @@ so it is important to remember that they are different.
 
 [Prev](../3-understand/README.md) /
 [Up](../README.md) /
-[Next](../../3-staticmethod/README.md)
+[Next](../../3-examples/README.md)
