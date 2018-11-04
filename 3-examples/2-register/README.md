@@ -59,6 +59,15 @@ When using decorators in this way,
 it is important to import all modules that include a registry,
 if your code is broken down into multiple files.
 
+(Executable script available in [repo](https://github.com/MichaelKim0407/python-decorators/tree/master/3-examples/2-register).)
+
+```python
+# app.py
+from flask import Flask
+
+app = Flask('app')
+```
+
 ```python
 # api.py
 from app import app
@@ -66,15 +75,16 @@ from app import app
 @app.route('/api/')
 def api_root():
     return "This api contains ..."
+```
 
-# app.py
-from flask import Flask
-
-app = Flask('app')
-
+```python
 # main.py
 from app import app
-import api
+import api  # try removing this line and then visit /api
+
+@app.route('/')
+def index():
+    return '<a href="/api">api</a>'
 
 if __name__ == '__main__':
     app.run()
