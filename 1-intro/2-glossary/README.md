@@ -9,13 +9,15 @@ In the [glossary](https://docs.python.org/3/glossary.html#term-decorator) page t
 >
 > The decorator syntax is merely syntactic sugar, the following two function definitions are semantically equivalent:
 >
->     def f(...):
->         ...
->     f = staticmethod(f)
+> ```python
+> def f(...):
+>     ...
+> f = staticmethod(f)
 >
->     @staticmethod
->     def f(...):
->         ...
+> @staticmethod
+> def f(...):
+>     ...
+> ```
 >
 > The same concept exists for classes, but is less commonly used there.
 > See the documentation for [function definitions](https://docs.python.org/3/reference/compound_stmts.html#function) and [class definitions](https://docs.python.org/3/reference/compound_stmts.html#class) for more about decorators.

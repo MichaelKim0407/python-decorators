@@ -11,14 +11,18 @@ Another place where the decorator syntax is mentioned is the [function definitio
 > Multiple decorators are applied in nested fashion.
 > For example, the following code
 >
->     @f1(arg)
->     @f2
->     def func(): pass
+> ```python
+> @f1(arg)
+> @f2
+> def func(): pass
+> ```
 >
 > is roughly equivalent to
 >
->     def func(): pass
->     func = f1(arg)(f2(func))
+> ```python
+> def func(): pass
+> func = f1(arg)(f2(func))
+> ```
 >
 > except that the original function is not temporarily bound to the name `func`.
 

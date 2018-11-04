@@ -14,129 +14,135 @@ In this case it can be combined with decorators to achieve more complex function
 
 * Example 1
 
-        def execute(type=tuple):
-            """
-            Execute a generator and store results in a storage (default is tuple)
-            """
+    ```python
+    def execute(type=tuple):
+        """
+        Execute a generator and store results in a storage (default is tuple)
+        """
 
-            def __decor(gen):
-                @functools.wraps(gen)
-                def __new_func(*args, **kwargs):
-                    return type(gen(*args, **kwargs))
+        def __decor(gen):
+            @functools.wraps(gen)
+            def __new_func(*args, **kwargs):
+                return type(gen(*args, **kwargs))
 
-                return __new_func
+            return __new_func
 
-            return __decor
+        return __decor
 
-        @execute()
-        def read_all(path):
-            for line in read_lines(path):
-                if line.startswith('#'):
-                    continue
-                yield line
+    @execute()
+    def read_all(path):
+        for line in read_lines(path):
+            if line.startswith('#'):
+                continue
+            yield line
+    ```
 
 * Example 2
 
-        def partial(
-                empty_error: Union[bool, Type[Exception]] = False
-        ):
-            """
-            Decorates a generator so that when called,
-            it's partially executed until the first `yield` statement.
+    ```python
+    def partial(
+            empty_error: Union[bool, Type[Exception]] = False
+    ):
+        """
+        Decorates a generator so that when called,
+        it's partially executed until the first `yield` statement.
 
-            If the result is empty (i.e. a `yield` statement is never reached),
-            0. The generator will be fully executed; and
-            1. If `empty_error` is False (default), an empty tuple will be returned; otherwise
-            2. If `empty_error` is True, a StopIteration will be raised; otherwise
-            3. `empty_error()` will be raised
-            """
+        If the result is empty (i.e. a `yield` statement is never reached),
+        0. The generator will be fully executed; and
+        1. If `empty_error` is False (default), an empty tuple will be returned; otherwise
+        2. If `empty_error` is True, a StopIteration will be raised; otherwise
+        3. `empty_error()` will be raised
+        """
 
-            def __decor(gen):
-                @functools.wraps(gen)
-                def __new_func(*args, **kwargs):
-                    iterator = gen(*args, **kwargs)
-                    try:
-                        first = next(iterator)
-                    except StopIteration:
-                        if not empty_error:
-                            return ()
-                        elif isinstance(empty_error, bool):
-                            # empty_error = True
-                            raise
-                        else:
-                            raise empty_error()
-
-                    def __new_generator():
-                        yield first
-                        for item in iterator:
-                            yield item
-
-                    return __new_generator()
-
-                return __new_func
-
-            return __decor
-
-        class Float(Exception):
-            pass
-
-        @partial()
-        def read_int(path):
-            for line in read_lines(path):
-                if line.startswith('#'):
-                    if 'float' in line:
-                        raise Float
-                    continue
+        def __decor(gen):
+            @functools.wraps(gen)
+            def __new_func(*args, **kwargs):
+                iterator = gen(*args, **kwargs)
                 try:
-                    yield int(line)
-                except ValueError:
-                    continue
+                    first = next(iterator)
+                except StopIteration:
+                    if not empty_error:
+                        return ()
+                    elif isinstance(empty_error, bool):
+                        # empty_error = True
+                        raise
+                    else:
+                        raise empty_error()
 
-        def read_float(path):
-            for line in read_lines(path):
-                if line.startswith('#'):
-                    continue
-                try:
-                    yield float(line)
-                except ValueError:
-                    continue
+                def __new_generator():
+                    yield first
+                    for item in iterator:
+                        yield item
 
-        def read(path):
+                return __new_generator()
+
+            return __new_func
+
+        return __decor
+
+    class Float(Exception):
+        pass
+
+    @partial()
+    def read_int(path):
+        for line in read_lines(path):
+            if line.startswith('#'):
+                if 'float' in line:
+                    raise Float
+                continue
             try:
-                return read_int(path)
-            except Float:
-                return read_float(path)
+                yield int(line)
+            except ValueError:
+                continue
+
+    def read_float(path):
+        for line in read_lines(path):
+            if line.startswith('#'):
+                continue
+            try:
+                yield float(line)
+            except ValueError:
+                continue
+
+    def read(path):
+        try:
+            return read_int(path)
+        except Float:
+            return read_float(path)
+    ```
 
 * Example 3
 
-        def report(log=print, name=None, interval=1000):
-            """
-            Report progress of a generator
-            """
+    ```python
+    def report(log=print, name=None, interval=1000):
+        """
+        Report progress of a generator
+        """
 
-            def __decor(gen):
-                _name = name or gen.__name__
+        def __decor(gen):
+            _name = name or gen.__name__
 
-                @functools.wraps(gen)
-                def __new_func(*args, **kwargs):
-                    count = 0
-                    for item in gen(*args, **kwargs):
-                        yield item
-                        count += 1
-                        if count % interval == 0:
-                            log("{}: yielded {} entries".format(_name, count))
-                    log("{}: finished with {} entries".format(_name, count))
+            @functools.wraps(gen)
+            def __new_func(*args, **kwargs):
+                count = 0
+                for item in gen(*args, **kwargs):
+                    yield item
+                    count += 1
+                    if count % interval == 0:
+                        log("{}: yielded {} entries".format(_name, count))
+                log("{}: finished with {} entries".format(_name, count))
 
-                return __new_func
+            return __new_func
 
-            return __decor
+        return __decor
 
-        @report()
-        def read(path):
-            for line in read_lines(path):
-                if line.startswith('#'):
-                    continue
-                yield line
+    @report()
+    def read(path):
+        for line in read_lines(path):
+            if line.startswith('#'):
+                continue
+            yield line
+    ```
 
 [Prev](../3-wrap-logic/README.md) /
 [Up](../README.md) /

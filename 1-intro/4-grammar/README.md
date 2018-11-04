@@ -4,9 +4,11 @@
 
 In Python's [full grammer specification](https://docs.python.org/3/reference/grammar.html?highlight=decorator) this part can be found:
 
->     decorator: '@' dotted_name [ '(' [arglist] ')' ] NEWLINE
->     decorators: decorator+
->     decorated: decorators (classdef | funcdef | async_funcdef)
+> ```
+> decorator: '@' dotted_name [ '(' [arglist] ')' ] NEWLINE
+> decorators: decorator+
+> decorated: decorators (classdef | funcdef | async_funcdef)
+> ```
 
 This is basically saying,
 decorators start with an `@`,

@@ -7,9 +7,11 @@
     > A static method does not receive an implicit first argument.
     > To declare a static method, use this idiom:
     >
-    >     class C:
-    >         @staticmethod
-    >         def f(arg1, arg2, ...): ...
+    > ```python
+    > class C:
+    >     @staticmethod
+    >     def f(arg1, arg2, ...): ...
+    > ```
     >
     > The `@staticmethod` form is a function decorator –
     > see the description of function definitions in Function definitions for details.
@@ -19,9 +21,11 @@
 
 * [`classmethod`](https://docs.python.org/3/library/functions.html#classmethod)
 
-    >     class C:
-    >         @classmethod
-    >         def f(cls, arg1, arg2, ...): ...
+    > ```python
+    > class C:
+    >     @classmethod
+    >     def f(cls, arg1, arg2, ...): ...
+    > ```
     >
     > It can be called either on the class (such as `C.f()`) or on an instance (such as `C().f()`).
     > The instance is ignored except for its class.

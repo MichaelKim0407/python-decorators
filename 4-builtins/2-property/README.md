@@ -12,74 +12,78 @@
 
     (Executable scripts available in [repo](https://github.com/MichaelKim0407/python-decorators/tree/master/4-builtins/2-property).)
 
-        class Vector2(object):
-            def __init__(self, x, y):
-                self.x = x
-                self.y = y
+    ```python
+    class Vector2(object):
+        def __init__(self, x, y):
+            self.x = x
+            self.y = y
 
-            def __str__(self):
-                return "({}, {})".format(self.x, self.y)
+        def __str__(self):
+            return "({}, {})".format(self.x, self.y)
 
-            @property
-            def array(self):
-                return self.x, self.y
+        @property
+        def array(self):
+            return self.x, self.y
 
-            @array.setter
-            def array(self, val):
-                self.x, self.y = val
+        @array.setter
+        def array(self, val):
+            self.x, self.y = val
 
-            @property
-            def length(self):
-                return math.sqrt(sum(i ** 2 for i in self.array))
+        @property
+        def length(self):
+            return math.sqrt(sum(i ** 2 for i in self.array))
 
-            @length.setter
-            def length(self, val):
-                ratio = val / self.length
-                self.x *= ratio
-                self.y *= ratio
+        @length.setter
+        def length(self, val):
+            ratio = val / self.length
+            self.x *= ratio
+            self.y *= ratio
 
-            @length.deleter
-            def length(self):
-                self.x = 0
-                self.y = 0
+        @length.deleter
+        def length(self):
+            self.x = 0
+            self.y = 0
 
-        if __name__ == '__main__':
-            v = Vector2(1, 3)
-            print(v.array)
-            v.array = 2, 2
-            print(v)
+    if __name__ == '__main__':
+        v = Vector2(1, 3)
+        print(v.array)
+        v.array = 2, 2
+        print(v)
 
-            print(v.length)
-            v.length += math.sqrt(2)
-            print(v)
+        print(v.length)
+        v.length += math.sqrt(2)
+        print(v)
 
-            del v.length
-            print(v)
+        del v.length
+        print(v)
+    ```
 
     For a property, the setter or deleter don't have to be defined,
     so you may create read-only properties.
 
-        class C(object):
-            def __init__(self, x):
-                self.__private = x
+    ```python
+    class C(object):
+        def __init__(self, x):
+            self.__private = x
 
-            @property
-            def x(self):
-                return self.__private
+        @property
+        def x(self):
+            return self.__private
 
-        if __name__ == '__main__':
-            c = C(1)
-            print(c.x)
+    if __name__ == '__main__':
+        c = C(1)
+        print(c.x)
 
-            try:
-                print(c.__private)
-            except AttributeError as e:
-                print(repr(e))
+        try:
+            print(c.__private)
+        except AttributeError as e:
+            print(repr(e))
 
-            try:
-                c.x = 2
-            except AttributeError as e:
-                print(repr(e))
+        try:
+            c.x = 2
+        except AttributeError as e:
+            print(repr(e))
+    ```
 
 * @cached_property
 
@@ -99,29 +103,31 @@
 
     Especially when both are true.
 
-        import sys
-        import time
+    ```python
+    import sys
+    import time
 
-        from cached_property import cached_property
+    from cached_property import cached_property
 
-        class C(object):
-            def __init__(self, x):
-                self.__x = x
+    class C(object):
+        def __init__(self, x):
+            self.__x = x
 
-            @property
-            def x(self):
-                return self.__x
+        @property
+        def x(self):
+            return self.__x
 
-            @cached_property
-            def squared(self):
-                print('Calculating...', file=sys.stderr)
-                time.sleep(1)
-                return self.x ** 2
+        @cached_property
+        def squared(self):
+            print('Calculating...', file=sys.stderr)
+            time.sleep(1)
+            return self.x ** 2
 
-        if __name__ == '__main__':
-            c = C(10)
-            print(c.squared)
-            print(c.squared)
+    if __name__ == '__main__':
+        c = C(10)
+        print(c.squared)
+        print(c.squared)
+    ```
 
 [Prev](../1-staticmethod/README.md) /
 [Up](../README.md) /

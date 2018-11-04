@@ -15,41 +15,49 @@ All it asks is a callable that can be called with one parameter.
 
 Once we realize this, we can write decorators in a variety of ways:
 
-    @clazz  # __init__
-    ...
+```python
+@clazz  # __init__
+...
 
-    @instace  # __call__
-    ...
+@instace  # __call__
+...
 
-    @instance.method
-    ...
+@instance.method
+...
+```
 
 In fact, it is a common practice to write "decorators with parameters" as classes:
 
-    class with_params:  # PEP 8 freaks out
-        def __init__(...[decorator parameters]):
-            ...
+```python
+class with_params:  # PEP 8 freaks out
+    def __init__(...[decorator parameters]):
+        ...
 
-        def __call__(decorated):
-            ...
+    def __call__(decorated):
+        ...
+```
 
 Unfortunately, as per the grammar specs,
 a decorator can only come in the format of `dotted_name [ '(' [arglist] ')' ]`,
 which means the following code will be `SyntaxError`, although they make perfect sense:
 
-    @decorator_list[0]
-    ...
+```python
+@decorator_list[0]
+...
 
-    @some_func(...)(...)
-    ...
+@some_func(...)(...)
+...
+```
 
 However, we can circumvent this by using a function
 
-    def as_is(x):
-        return x
+```python
+def as_is(x):
+    return x
 
-    @as_is(decorator_list[0])
-    ...
+@as_is(decorator_list[0])
+...
+```
 
 which is kind of silly, to be honest.
 
