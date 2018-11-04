@@ -79,6 +79,48 @@
             except AttributeError as e:
                 print(repr(e))
 
+* @cached_property
+
+    `@cached_property` is available in both the
+    [cached-property](https://github.com/pydanny/cached-property) package
+    and the [Django](https://docs.djangoproject.com/en/2.1/ref/utils/#django.utils.functional.cached_property) package.
+
+    Instead of being a property with setter and deleter,
+    it is just a getter that evaluates and replaces it self with the result
+    when it is first accessed.
+
+    It is most useful in two cases:
+
+    1. There is a resource-heavy calculation that should only be done on demand.
+
+    2. A calculated value that does not change while changes are made to the class instance.
+
+    Especially when both are true.
+
+        import sys
+        import time
+
+        from cached_property import cached_property
+
+        class C(object):
+            def __init__(self, x):
+                self.__x = x
+
+            @property
+            def x(self):
+                return self.__x
+
+            @cached_property
+            def squared(self):
+                print('Calculating...', file=sys.stderr)
+                time.sleep(1)
+                return self.x ** 2
+
+        if __name__ == '__main__':
+            c = C(10)
+            print(c.squared)
+            print(c.squared)
+
 [Prev](../README.md) /
 [Up](../README.md) /
 [Next](../2-functools/README.md)
