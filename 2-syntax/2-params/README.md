@@ -1,5 +1,7 @@
 # A dive into the syntax
 
+## Passing parameters
+
 The syntax is a little bit different if we wish to pass parameters to a decorator:
 
     def with_params(...):

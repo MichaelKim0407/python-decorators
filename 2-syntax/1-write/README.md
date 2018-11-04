@@ -1,5 +1,7 @@
 # A dive into the syntax
 
+## Writing a decorator
+
 Although we shouldn't take "a function that returns a function" as the definition,
 it is still the simplest form of decorator:
 

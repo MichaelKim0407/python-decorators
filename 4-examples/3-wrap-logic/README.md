@@ -1,5 +1,7 @@
 # Examples
 
+## Wrapping a simple logic
+
 A decorator can be used to wrap a simple piece of logic to the decorated function.
 
 It does so by creating a new function, injecting the logic,

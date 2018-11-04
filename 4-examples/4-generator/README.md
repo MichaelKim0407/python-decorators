@@ -1,5 +1,7 @@
 # Examples
 
+## Working with generator functions
+
 Generator is a special type of function in Python that behaves as an iterator.
 It is both easier to read and more efficient than using `list.append`
 when building an iterable.

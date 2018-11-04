@@ -1,5 +1,7 @@
 # A dive into the syntax
 
+## A better understanding
+
 One way to see decorator with parameters is that there simply isn't such a thing.
 
 A decorator is exactly what follows `@` in the same line.

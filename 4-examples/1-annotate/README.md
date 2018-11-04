@@ -1,5 +1,7 @@
 # Examples
 
+## Annotation
+
 Before we use a decorator to do something, we can instead use it to do nothing.
 
     def annotate(*args, **kwargs):

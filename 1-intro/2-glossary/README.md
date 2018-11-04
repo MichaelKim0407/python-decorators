@@ -1,5 +1,7 @@
 # What is a Python decorator?
 
+## Glossary
+
 In the [glossary](https://docs.python.org/3/glossary.html#term-decorator) page there is an entry for the term decorator:
 
 > A function returning another function, usually applied as a function transformation using the `@wrapper` syntax.

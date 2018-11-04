@@ -1,5 +1,7 @@
 # Built-ins and libraries
 
+## @property and @cached_property
+
 * @property
 
     [`@property`](https://docs.python.org/3/library/functions.html#property)

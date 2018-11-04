@@ -1,5 +1,7 @@
 # What is a Python decorator?
 
+## Function definitions
+
 Another place where the decorator syntax is mentioned is the [function definitions](https://docs.python.org/3/reference/compound_stmts.html#function).
 
 > A function definition may be wrapped by one or more [decorator](https://docs.python.org/3/glossary.html#term-decorator) expressions.

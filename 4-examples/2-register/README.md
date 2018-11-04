@@ -1,5 +1,7 @@
 # Examples
 
+## Registering an item
+
 Decorators can be used to register an item without changing it.
 
 >     def route(self, rule, **options):

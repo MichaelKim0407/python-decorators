@@ -1,5 +1,7 @@
 # Examples
 
+## Function-like class instances
+
 Some classes behave like functions;
 or, sometimes we create classes to extend a function.
 
