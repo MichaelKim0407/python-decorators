@@ -65,7 +65,7 @@ and calling the original function to retrieve the result.
 
 * Example 2
 
-    (Script available in <a href="https://github.com/MichaelKim0407/python-decorators/tree/master/4-examples/3-wrap-logic" target="_blank">repo</a>.)
+    (Script available in [repo](https://github.com/MichaelKim0407/python-decorators/tree/master/4-examples/3-wrap-logic).)
 
         import time
         import functools

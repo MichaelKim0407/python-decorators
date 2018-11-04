@@ -8,7 +8,7 @@
     In practice properties are used just like value attributes -
     they can be accessed with dotted name without parentheses.
 
-    (Executable scripts available in <a href="https://github.com/MichaelKim0407/python-decorators/tree/master/5-builtins/1-property" target="_blank">repo</a>.)
+    (Executable scripts available in [repo](https://github.com/MichaelKim0407/python-decorators/tree/master/5-builtins/1-property).)
 
         class Vector2(object):
             def __init__(self, x, y):

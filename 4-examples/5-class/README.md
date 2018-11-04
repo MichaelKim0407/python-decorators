@@ -5,7 +5,7 @@ or, sometimes we create classes to extend a function.
 
 Decorators can be used to create instances out of function definitions.
 
-(Script available in <a href="https://github.com/MichaelKim0407/python-decorators/tree/master/4-examples/5-class" target="_blank">repo</a>.)
+(Script available in [repo](https://github.com/MichaelKim0407/python-decorators/tree/master/4-examples/5-class).)
 
     class Task(object):
         def __init__(self, func):
