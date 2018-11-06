@@ -5,8 +5,6 @@
 The [contextlib](https://docs.python.org/3/library/contextlib.html) module
 allows easy creation of context managers to be used in `with` clauses.
 
-(Executable scripts in [repo](https://github.com/MichaelKim0407/python-decorators/tree/master/4-builtins/4-contextlib).)
-
 * contextmanager
 
     [Doc](https://docs.python.org/3/library/contextlib.html#contextlib.contextmanager):
@@ -27,6 +25,8 @@ allows easy creation of context managers to be used in `with` clauses.
     finally:
         ...  # exit
     ```
+
+    _(Script available)_
 
     ```python
     import os
@@ -62,6 +62,8 @@ allows easy creation of context managers to be used in `with` clauses.
     >
     > Context managers inheriting from `ContextDecorator` have to implement `__enter__` and `__exit__` as normal.
     > `__exit__` retains its optional exception handling even when used as a decorator.
+
+    _(Script available)_
 
     ```python
     import os

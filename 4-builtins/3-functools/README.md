@@ -6,13 +6,13 @@ The [functools](https://docs.python.org/3/library/functools.html) module
 provides some useful tools for functions,
 including several decorators.
 
-(Executable scripts in [repo](https://github.com/MichaelKim0407/python-decorators/tree/master/4-builtins/3-functools).)
-
 * @wraps
 
     [`@wraps`](https://docs.python.org/3/library/functools.html#functools.wraps)
     is useful when creating decorators.
     It updates the new function to "look like" the original function.
+
+    _(Script available)_
 
     ```python
     from functools import wraps
@@ -42,6 +42,8 @@ including several decorators.
     [`@lru_cache`](https://docs.python.org/3/library/functools.html#functools.lru_cache)
     lets a function memorize its previous calls and their results,
     eliminating the need to make repetitive calculations.
+
+    _(Script available)_
 
     ```python
     import sys
@@ -80,6 +82,8 @@ including several decorators.
     > [`__gt__()`](https://docs.python.org/3/reference/datamodel.html#object.__gt__),
     > or [`__ge__()`](https://docs.python.org/3/reference/datamodel.html#object.__ge__).
     > In addition, the class should supply an [`__eq__()`](https://docs.python.org/3/reference/datamodel.html#object.__eq__) method.
+
+    _(Script available)_
 
     ```python
     from functools import total_ordering

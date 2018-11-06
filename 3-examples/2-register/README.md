@@ -59,7 +59,7 @@ When using decorators in this way,
 it is important to import all modules that include a registry,
 if your code is broken down into multiple files.
 
-(Executable script available in [repo](https://github.com/MichaelKim0407/python-decorators/tree/master/3-examples/2-register).)
+_(Script available)_
 
 ```python
 # app.py

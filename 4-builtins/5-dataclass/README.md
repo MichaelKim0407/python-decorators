@@ -13,9 +13,9 @@ Some consider dataclass to be an upgrade from
 In short, the decorator will read the type annotations
 and create methods like `__init__`, `__repr__`, `__eq__`, etc.
 
-(Executable scripts in [repo](https://github.com/MichaelKim0407/python-decorators/tree/master/4-builtins/5-dataclass).)
-
 * Example 1
+
+    _(Script available)_
 
     ```python
     from dataclasses import dataclass
@@ -46,6 +46,8 @@ and create methods like `__init__`, `__repr__`, `__eq__`, etc.
     To enforce variable types please see next example.
 
 * Example 2
+
+    _(Script available)_
 
     ```python
     import sys

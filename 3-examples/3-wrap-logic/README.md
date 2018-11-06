@@ -71,7 +71,7 @@ and calling the original function to retrieve the result.
 
 * Example 2
 
-    (Script available in [repo](https://github.com/MichaelKim0407/python-decorators/tree/master/3-examples/3-wrap-logic).)
+    _(Script available)_
 
     ```python
     import time

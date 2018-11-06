@@ -10,7 +10,7 @@
     In practice properties are used just like value attributes -
     they can be accessed with dotted name without parentheses.
 
-    (Executable scripts available in [repo](https://github.com/MichaelKim0407/python-decorators/tree/master/4-builtins/2-property).)
+    _(Script available)_
 
     ```python
     class Vector2(object):
@@ -61,6 +61,8 @@
     For a property, the setter or deleter don't have to be defined,
     so you may create read-only properties.
 
+    _(Script available)_
+
     ```python
     class C(object):
         def __init__(self, x):
@@ -102,6 +104,8 @@
     2. A calculated value that does not change while changes are made to the class instance.
 
     Especially when both are true.
+
+    _(Script available)_
 
     ```python
     import sys
