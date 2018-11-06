@@ -1,6 +1,8 @@
 # @staticmethod and @classmethod
 
-* [`staticmethod`](https://docs.python.org/3/library/functions.html#staticmethod)
+* @staticmethod
+
+    [Doc](https://docs.python.org/3/library/functions.html#staticmethod)
 
     > Transform a method into a static method.
     >
@@ -19,7 +21,9 @@
     > It can be called either on the class (such as `C.f()`) or on an instance (such as `C().f()`).
     > The instance is ignored except for its class.
 
-* [`classmethod`](https://docs.python.org/3/library/functions.html#classmethod)
+* @classmethod
+
+    [Doc](https://docs.python.org/3/library/functions.html#classmethod)
 
     > ```python
     > class C:
