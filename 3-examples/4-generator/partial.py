@@ -33,7 +33,7 @@ def partial(
                     # empty_error = True
                     raise
                 else:
-                    raise empty_error()
+                    raise empty_error() from None
 
             def __new_generator():
                 yield first

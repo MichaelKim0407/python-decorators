@@ -67,7 +67,7 @@ In this case it can be combined with decorators to achieve more complex function
                         # empty_error = True
                         raise
                     else:
-                        raise empty_error()
+                        raise empty_error() from None
 
                 def __new_generator():
                     yield first
