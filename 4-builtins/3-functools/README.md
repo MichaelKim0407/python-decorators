@@ -51,7 +51,7 @@ including several decorators.
 
     @lru_cache()
     def fibonacci(n):
-        print(f"Calculating {n}", file=sys.stderr)
+        print("Calculating {}".format(n), file=sys.stderr)
         time.sleep(0.1)
         if n <= 0:
             return 0

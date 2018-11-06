@@ -85,7 +85,7 @@ and calling the original function to retrieve the result.
                 return func(*args, **kwargs)
             finally:
                 end = time.time()
-                print(f"{func.__name__} took {end - start} seconds")
+                print("{} took {} seconds".format(func.__name__, end - start))
 
         return __new_func
 
