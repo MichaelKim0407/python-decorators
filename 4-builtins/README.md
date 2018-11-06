@@ -6,7 +6,7 @@
 
 * [functools](3-functools/README.md)
 
-* [@contextlib.contextmanager](4-contextmanager/README.md)
+* [contextlib](4-contextlib/README.md)
 
 * [@dataclasses.dataclass](5-dataclass/README.md)
 
