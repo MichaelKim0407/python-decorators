@@ -12,6 +12,8 @@ Michael Kim <mkim0407@gmail.com>
 
 * [Built-ins and libraries](4-builtins/README.md)
 
+* [Why decorators?](5-why/README.md)
+
 [View on github.io](https://michaelkim0407.github.io/python-decorators/)
 
 [View in GitHub repo](https://github.com/MichaelKim0407/python-decorators)
