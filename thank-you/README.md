@@ -1,3 +1,3 @@
 # Thank you!
 
-![decorated-bunnies](img/decorated-bunnies.jpg)
+![decorated-bunnies](decorated-bunnies.jpg)

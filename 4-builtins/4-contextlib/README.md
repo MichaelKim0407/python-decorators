@@ -5,7 +5,7 @@
 The [contextlib](https://docs.python.org/3/library/contextlib.html) module
 allows easy creation of context managers to be used in `with` clauses.
 
-* contextmanager
+* @contextmanager
 
     [Doc](https://docs.python.org/3/library/contextlib.html#contextlib.contextmanager):
 

@@ -17,13 +17,13 @@ Compare the following two pieces of code:
 ```python
 def index(request):
     if request.method != 'GET':
-        return HttpResponseMethodNotAllowed('GET')
+        return HttpResponseNotAllowed('GET')
 
     return HttpResponse("Hello, world!")
 
 def dashboard(request):
     if request.method != 'GET':
-        return HttpResponseMethodNotAllowed('GET')
+        return HttpResponseNotAllowed('GET')
 
     if request.user.is_anonymous:
         return redirect(request, reverse('login'))

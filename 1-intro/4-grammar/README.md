@@ -2,7 +2,7 @@
 
 ## Grammar specification
 
-In Python's [full grammer specification](https://docs.python.org/3/reference/grammar.html?highlight=decorator) this part can be found:
+In Python's [full grammar specification](https://docs.python.org/3/reference/grammar.html?highlight=decorator) this part can be found:
 
 > ```
 > decorator: '@' dotted_name [ '(' [arglist] ')' ] NEWLINE

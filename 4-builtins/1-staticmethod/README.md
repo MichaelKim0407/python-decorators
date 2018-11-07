@@ -2,7 +2,7 @@
 
 * @staticmethod
 
-    [Doc](https://docs.python.org/3/library/functions.html#staticmethod)
+    [Doc](https://docs.python.org/3/library/functions.html#staticmethod):
 
     > Transform a method into a static method.
     >
@@ -23,7 +23,7 @@
 
 * @classmethod
 
-    [Doc](https://docs.python.org/3/library/functions.html#classmethod)
+    [Doc](https://docs.python.org/3/library/functions.html#classmethod):
 
     > ```python
     > class C:

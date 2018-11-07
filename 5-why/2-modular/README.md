@@ -12,7 +12,7 @@ Compare the following two pieces of code:
 ```python
 def dashboard(request):
     if request.method != 'GET':
-        return HttpResponseMethodNotAllowed('GET')
+        return HttpResponseNotAllowed('GET')
 
     if request.user.is_anonymous:
         return redirect(request, reverse('login'))
@@ -37,7 +37,7 @@ def dashboard(request):
         else:
             return redirect(request, reverse('login'))
     else:
-        return HttpResponseMethodNotAllowed('GET')
+        return HttpResponseNotAllowed('GET')
 ```
 
 The snippet with decorators has a very clear, untwisted logic.
