@@ -16,4 +16,5 @@ so that my colleagues don't hate me,
 and more importantly, I don't hate myself.
 
 [Prev](../3-read/README.md) /
-[Up](../README.md)
+[Up](../README.md) /
+[Next](../../thank-you/README.md)
